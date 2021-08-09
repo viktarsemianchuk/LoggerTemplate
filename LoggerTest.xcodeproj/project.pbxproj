@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,8 @@
 		AD16467126BC2A4200E420B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD16466F26BC2A4200E420B0 /* Main.storyboard */; };
 		AD16467326BC2A4700E420B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD16467226BC2A4700E420B0 /* Assets.xcassets */; };
 		AD16467626BC2A4700E420B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD16467426BC2A4700E420B0 /* LaunchScreen.storyboard */; };
+		AD16468226BC2CB000E420B0 /* LoggerPackage in Frameworks */ = {isa = PBXBuildFile; productRef = AD16468126BC2CB000E420B0 /* LoggerPackage */; };
+		AD62206226C05828004A085E /* LoggerPackageLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD62206126C05828004A085E /* LoggerPackageLocal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,7 @@
 		AD16467226BC2A4700E420B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD16467526BC2A4700E420B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD16467726BC2A4700E420B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD62206126C05828004A085E /* LoggerPackageLocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerPackageLocal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD16468226BC2CB000E420B0 /* LoggerPackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +67,7 @@
 				AD16467226BC2A4700E420B0 /* Assets.xcassets */,
 				AD16467426BC2A4700E420B0 /* LaunchScreen.storyboard */,
 				AD16467726BC2A4700E420B0 /* Info.plist */,
+				AD62206126C05828004A085E /* LoggerPackageLocal.swift */,
 			);
 			path = LoggerTest;
 			sourceTree = "<group>";
@@ -83,6 +88,9 @@
 			dependencies = (
 			);
 			name = LoggerTest;
+			packageProductDependencies = (
+				AD16468126BC2CB000E420B0 /* LoggerPackage */,
+			);
 			productName = LoggerTest;
 			productReference = AD16466626BC2A4200E420B0 /* LoggerTest.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +118,9 @@
 				Base,
 			);
 			mainGroup = AD16465D26BC2A4200E420B0;
+			packageReferences = (
+				AD16468026BC2CB000E420B0 /* XCRemoteSwiftPackageReference "LoggerPackage" */,
+			);
 			productRefGroup = AD16466726BC2A4200E420B0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,6 +150,7 @@
 			files = (
 				AD16466E26BC2A4200E420B0 /* ViewController.swift in Sources */,
 				AD16466A26BC2A4200E420B0 /* AppDelegate.swift in Sources */,
+				AD62206226C05828004A085E /* LoggerPackageLocal.swift in Sources */,
 				AD16466C26BC2A4200E420B0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,12 +299,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C46KC9Y2PT;
 				INFOPLIST_FILE = LoggerTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = kek.LoggerTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.uladzislaustankevich.LoggerTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -305,12 +318,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C46KC9Y2PT;
 				INFOPLIST_FILE = LoggerTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = kek.LoggerTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.uladzislaustankevich.LoggerTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -339,6 +353,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AD16468026BC2CB000E420B0 /* XCRemoteSwiftPackageReference "LoggerPackage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/vlast01/LoggerPackage";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AD16468126BC2CB000E420B0 /* LoggerPackage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AD16468026BC2CB000E420B0 /* XCRemoteSwiftPackageReference "LoggerPackage" */;
+			productName = LoggerPackage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AD16465E26BC2A4200E420B0 /* Project object */;
 }
